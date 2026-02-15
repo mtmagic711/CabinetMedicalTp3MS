@@ -6,7 +6,7 @@
 
 **Sujet :** Architecture Microservices avec Spring Cloud Gateway
 
-**Réalisé par :** \[VOTRE NOM\]
+**Réalisé par :** \Abderrahmane HAMYD
 
 **Encadré par :** Pr. Jaouad OUHSSAINE
 
