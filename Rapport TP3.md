@@ -6,7 +6,7 @@
 
 **Sujet :** Architecture Microservices avec Spring Cloud Gateway
 
-**Réalisé par :** \Abderrahmane HAMYD
+**Réalisé par :** Abderrahmane HAMYD
 
 **Encadré par :** Pr. Jaouad OUHSSAINE
 
@@ -66,11 +66,13 @@ Les tests fonctionnels ont été réalisés via **Postman** en passant exclusive
 * **Action :** POST / GET /api/patients  
 * **Description :** Création d'un patient et récupération de la liste.  
 * **Résultat :** Le service répond avec un statut **201 Created** pour la création et **200 OK** pour la lecture. La Gateway a correctement routé vers le port 8082\.
-
+* 
+![Create_Patient](image/Create_Patients.png)
+*
 *Figure 1 : Création d'un patient via la Gateway.*
-
+![Get_Patients](image/Get_Patient.png)
 *Figure 2 : Récupération de la liste des patients.*
-
+![Get_Patient_ById](image/Get_Patient_ById.png)
 *Figure 3 : Récupération d'un détail patient.*
 
 ### **✅ Test 2 : Gestion des Médecins**
@@ -79,10 +81,11 @@ Les tests fonctionnels ont été réalisés via **Postman** en passant exclusive
 * **Description :** Enregistrement des médecins dans le référentiel.  
 * **Résultat :** Opérations réussies (**201 Created** / **200 OK**). Routage validé vers le port 8083\.
 
+![Create_medecin](image/Create_medecin.png)
 *Figure 4 : Ajout d'un médecin.*
-
+![Get_Medecins](image/Get_Medecins.png)
 *Figure 5 : Liste des médecins.*
-
+![Get_Medecin_ById](image/Get_Medecin_ById.png)
 *Figure 6 : Détail d'un médecin.*
 
 ### **✅ Test 3 : Planification de Rendez-vous (Communication Inter-services)**
@@ -91,10 +94,11 @@ Les tests fonctionnels ont été réalisés via **Postman** en passant exclusive
 * **Logique métier :** Ce service illustre la communication distribuée. Avant de créer le RDV, le rendezvous-service (8084) interroge le patient-service (8082) et le medecin-service (8083) pour valider les IDs fournis.  
 * **Résultat :** Le RDV est créé (**201 Created**) uniquement si les entités liées existent.
 
+![Create_rendezvous](image/Create_rendezvous.png)
 *Figure 7 : Création d'un RDV avec validation inter-services.*
-
+![Get_Rendezvous](image/Get_Rendezvous.png)
 *Figure 8 : Liste des rendez-vous.*
-
+![Get_Rendezvous_ById](image/Get_Rendezvous_ById.png)
 *Figure 9 : Détail d'un rendez-vous.*
 
 ### **✅ Test 4 : Gestion des Consultations**
@@ -103,10 +107,11 @@ Les tests fonctionnels ont été réalisés via **Postman** en passant exclusive
 * **Règle de gestion :** La date de consultation doit être postérieure ou égale à la date du rendez-vous associé.  
 * **Résultat :** Consultation enregistrée avec succès (**201 Created**).
 
+![Create_Consultation](image/Create_Consultation.png)
 *Figure 10 : Création d'une consultation.*
-
+![Get_Consultation](image/Get_Consultation.png)
 *Figure 11 : Liste des consultations.*
-
+![Get_Consultation_ById](image/Get_Consultation_ById.png)
 *Figure 12 : Détail d'une consultation.*
 
 ## **Conclusion**
