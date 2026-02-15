@@ -1,4 +1,4 @@
-package com.example.consultationservice;
+package ma.fsr.ms.consultationservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
